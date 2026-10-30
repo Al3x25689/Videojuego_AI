@@ -1,0 +1,166 @@
+{
+  "revision": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64",
+  "coleccion": "generation-iv/heartgold-soulsilver",
+  "sprites": [
+    {
+      "nombre": "gardevoir",
+      "pokedex": 282,
+      "url": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/282.png",
+      "sha256": "b8bf7416524efebc66e3ebb7898e3b9d142a5716dfe2e94dd9da42fd40bb466b",
+      "size": [
+        80,
+        80
+      ]
+    },
+    {
+      "nombre": "gengar",
+      "pokedex": 94,
+      "url": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/94.png",
+      "sha256": "aefa9c9f64c4d5947f6ca7d1a6f3610349df847c6c32870ea34c19bc778b09b2",
+      "size": [
+        80,
+        80
+      ]
+    },
+    {
+      "nombre": "pikachu",
+      "pokedex": 25,
+      "url": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/25.png",
+      "sha256": "169ee46d665f55a69702287c040a60faa9ee1bec6830d7ef95dd7b49cd0480a3",
+      "size": [
+        80,
+        80
+      ]
+    },
+    {
+      "nombre": "lucario",
+      "pokedex": 448,
+      "url": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/448.png",
+      "sha256": "e6cecb2a66c2ea7e317ba786f52e2e695c598b3e140da33b55126142e9dca1e9",
+      "size": [
+        80,
+        80
+      ]
+    },
+    {
+      "nombre": "charizard",
+      "pokedex": 6,
+      "url": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/6.png",
+      "sha256": "0f521bfea79a89cd38a6d6d1a35fcba43567aa073fa6ee937b1caa4b6aab75a0",
+      "size": [
+        80,
+        80
+      ]
+    },
+    {
+      "nombre": "dragonite",
+      "pokedex": 149,
+      "url": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/149.png",
+      "sha256": "f4b505dc15a87a90ae201ee1a8e5439cf64c06b2ae6c6dc244ec848578ab06a8",
+      "size": [
+        80,
+        80
+      ]
+    },
+    {
+      "nombre": "eevee",
+      "pokedex": 133,
+      "url": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/133.png",
+      "sha256": "3fe2fda62f18231593bc1f117b183dac6e40c814af9f45d8d63b5301a9a6250d",
+      "size": [
+        80,
+        80
+      ]
+    },
+    {
+      "nombre": "umbreon",
+      "pokedex": 197,
+      "url": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/197.png",
+      "sha256": "231ac3ac96406a855ea2e865867bab978227a3be357ebabb412ba45d83c77ade",
+      "size": [
+        80,
+        80
+      ]
+    },
+    {
+      "nombre": "absol",
+      "pokedex": 359,
+      "url": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/359.png",
+      "sha256": "ae017edfb15be239e6c8967f8725c58629f01aab6cb9e274662456c396f75c3e",
+      "size": [
+        80,
+        80
+      ]
+    },
+    {
+      "nombre": "riolu",
+      "pokedex": 447,
+      "url": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/447.png",
+      "sha256": "61348a4002092d5d758096607f29c2e46f2330bbf986fec57cd1db978597966c",
+      "size": [
+        80,
+        80
+      ]
+    },
+    {
+      "nombre": "bulbasaur",
+      "pokedex": 1,
+      "url": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/1.png",
+      "sha256": "4f3d44577cf1b028a89385c58eab9aea2cfedb4176804ffbe08bc26dcf9a9a17",
+      "size": [
+        80,
+        80
+      ]
+    },
+    {
+      "nombre": "squirtle",
+      "pokedex": 7,
+      "url": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/7.png",
+      "sha256": "807c68585f7af3ebfae07adeb97b8c298998fa0b38c8cf7b89837bd2a5842aee",
+      "size": [
+        80,
+        80
+      ]
+    },
+    {
+      "nombre": "mew",
+      "pokedex": 151,
+      "url": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/151.png",
+      "sha256": "455fa60eef5822390887fb070a3a64ddf0680f5395afa7b8531ad852a1b9e4c9",
+      "size": [
+        80,
+        80
+      ]
+    },
+    {
+      "nombre": "espeon",
+      "pokedex": 196,
+      "url": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/196.png",
+      "sha256": "7ffee265d504f0f78395ab23ca522df75097640f10d493da86fb7aea3de1ed04",
+      "size": [
+        80,
+        80
+      ]
+    },
+    {
+      "nombre": "tyranitar",
+      "pokedex": 248,
+      "url": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/248.png",
+      "sha256": "a00578059e67268bc7ac42d7172ec7acd92c8fbf1d75f4d4ee0debccde75442c",
+      "size": [
+        80,
+        80
+      ]
+    },
+    {
+      "nombre": "metagross",
+      "pokedex": 376,
+      "url": "https://raw.githubusercontent.com/PokeAPI/sprites/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/376.png",
+      "sha256": "21f253f95ce12f7f9d94f29113a27764fa01e67d1b4f0c993731f976b731d19a",
+      "size": [
+        80,
+        80
+      ]
+    }
+  ]
+}

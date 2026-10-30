@@ -1,4 +1,4 @@
-## Segunda iteración - Versión 2.0
+## 5. Tercera iteración - Versión 3.0
 
 ### Prompt utilizado
 
@@ -6,93 +6,107 @@
 
 Eres un asistente experto en desarrollo de videojuegos utilizando Python y Tkinter.
 
-Actualmente tenemos desarrollada la primera versión de un juego de memoria ubicado en `C:\Game`, cuyo archivo principal es `main.py`.
+Actualmente tenemos desarrollada la versión 2.0 de un juego de memoria con temática Pokémon, ubicado en `C:\Game`, cuyo archivo principal es `main.py`.
 
-El juego ya cuenta con un tablero de cuatro pares de cartas, un contador de pares encontrados y un botón para iniciar una nueva partida.
+El juego cuenta con cuatro pares de cartas, sprites de Pokémon en pixel art, un fondo inspirado en los videojuegos clásicos de Pokémon, un contador de parejas encontradas y un botón para iniciar una nueva partida.
 
-Necesito que trabajes sobre el código existente, conservando su funcionamiento y mejorando únicamente su presentación visual.
+Necesito que desarrolles la versión 3.0, conservando el funcionamiento y la estética actual, corrigiendo algunos detalles visuales y agregando nuevas funcionalidades.
 
 **Instrucción:**
 
-Quiero desarrollar la segunda versión del juego de memoria, incorporando una temática inspirada en los videojuegos clásicos de Pokémon, utilizando sprites en pixel art.
+Realiza las siguientes mejoras:
 
-Realiza las siguientes modificaciones:
-
-1. Sustituye los símbolos actuales de las cartas por imágenes de cuatro Pokémon diferentes: Gardevoir, Gengar, Pikachu y Lucario.
-2. Cada Pokémon deberá aparecer dos veces, formando los cuatro pares del juego.
-3. Cuando las cartas estén boca abajo, deberán mostrar un diseño uniforme inspirado en las cartas Pokémon, preferiblemente con una Poké Ball en el centro.
-4. Al seleccionar una carta, deberá mostrarse el sprite del Pokémon correspondiente.
-5. Agrega un fondo visual inspirado en los escenarios clásicos de Pokémon, utilizando una estética pixel art.
-6. Mejora el diseño de los botones, títulos y contador de pares encontrados para que combinen con la temática del juego.
-7. Mantén las cartas organizadas en una cuadrícula de cuatro columnas y dos filas.
-8. Conserva la funcionalidad de reiniciar la partida y distribuir aleatoriamente las cartas.
-9. Cuando el jugador encuentre los cuatro pares, muestra un mensaje de victoria acorde con la temática.
+1. Corrige el fondo azul grisáceo de las cartas descubiertas, sustituyéndolo por un color crema uniforme y conservando los bordes dorados.
+2. Implementa tres niveles de dificultad:
+   - Fácil: 4 parejas y 8 cartas.
+   - Medio: 8 parejas y 16 cartas.
+   - Difícil: 16 parejas y 32 cartas.
+3. Incorpora una pantalla inicial que permita seleccionar el nivel de dificultad.
+4. Utiliza sprites pixel art de Pokémon HeartGold & SoulSilver, correspondientes a la cuarta generación, disponibles en el repositorio PokéAPI.
+5. Integra 16 Pokémon diferentes para permitir jugar en todas las dificultades.
+6. Descarga los recursos gráficos necesarios y almacénalos localmente en la carpeta `assets`.
+7. Implementa un botón para activar y desactivar el modo de pantalla completa.
+8. Permite salir del modo de pantalla completa utilizando la tecla ESC.
+9. Ajusta el tamaño y la distribución de las cartas según la dificultad seleccionada y el espacio disponible.
+10. Incorpora un botón para regresar al menú principal.
+11. Conserva el contador de parejas, el reinicio de partida, la distribución aleatoria de cartas y la pantalla de victoria.
+12. Cancela correctamente los eventos pendientes al reiniciar o cambiar de dificultad.
 
 **Formato de salida:**
 
-- Utiliza Python y conserva Tkinter como biblioteca principal.
-- Modifica el archivo existente `C:\Game\main.py`.
-- Crea una carpeta `C:\Game\assets` para almacenar los recursos gráficos.
-- Organiza los sprites y las imágenes del fondo dentro de dicha carpeta.
-- Utiliza imágenes PNG con transparencia cuando corresponda.
-- Mantén el código organizado y fácil de comprender.
+- Utiliza Python y Tkinter.
+- Modifica el proyecto existente en `C:\Game`.
+- Conserva `main.py` como archivo principal.
+- Almacena los recursos gráficos en `assets`.
+- Mantén la estética pixel art.
+- Conserva los archivos y las evidencias de versiones anteriores.
+- Documenta la procedencia de los recursos gráficos.
 
 **Restricciones:**
 
-- No desarrolles el juego desde cero; modifica la versión existente.
-- No elimines las funcionalidades implementadas en la versión 1.0.
-- Mantén los cuatro pares de cartas originales.
-- No modifiques las reglas del juego.
-- No utilices servicios externos durante la ejecución.
-- Las imágenes deben cargarse desde archivos locales.
-- Conserva la apariencia pixel art de los sprites.
-- Utiliza recursos gráficos con permisos de uso adecuados y documenta su procedencia.
-- Asegúrate de que el juego funcione correctamente en Windows.
+- No desarrolles el juego desde cero.
+- No elimines funcionalidades existentes.
+- No generes nuevos sprites mediante inteligencia artificial.
+- Utiliza sprites de una misma colección para mantener la uniformidad visual.
+- No implementes todavía temporizador ni sistema de ayudas.
+- No modifiques el README ni las evidencias anteriores.
+- No utilices conexión a Internet durante la ejecución del juego.
 
 ### ¿Qué se solicitó a la IA?
 
-Se solicitó a Codex realizar una mejora visual sobre la primera versión del juego, incorporando una temática inspirada en los videojuegos clásicos de Pokémon.
+Se solicitó a Codex ampliar las funcionalidades de la versión 2.0 mediante la implementación de tres niveles de dificultad y un sistema de navegación entre pantallas.
 
-El objetivo principal de esta iteración fue reemplazar los elementos visuales básicos por imágenes personalizadas, manteniendo las funcionalidades previamente desarrolladas.
+También se pidió corregir la presentación visual de las cartas descubiertas y reemplazar los sprites generados anteriormente por recursos pixel art existentes, manteniendo un estilo gráfico uniforme.
 
-Además, se solicitó implementar un fondo pixel art, rediseñar las cartas y mejorar la presentación de los botones, títulos y mensajes del juego.
+Además, se solicitó implementar el modo de pantalla completa y adaptar dinámicamente la distribución del tablero.
 
 ### Resultado obtenido
 
-Como resultado de la segunda interacción con Codex, se obtuvo una nueva interfaz gráfica con una estética inspirada en los videojuegos clásicos de Pokémon.
+Como resultado de la tercera iteración, se obtuvo una versión del juego con nuevas funcionalidades y mejoras en la experiencia del usuario.
 
-Para esta versión, Codex utilizó herramientas de generación de imágenes mediante inteligencia artificial, creando recursos gráficos que posteriormente fueron integrados al juego.
+Entre los cambios realizados se encuentran:
 
-Entre los principales cambios realizados se encuentran:
+- Implementación de una pantalla principal para seleccionar la dificultad.
+- Incorporación de tres niveles con diferentes cantidades de cartas.
+- Integración de sprites pixel art de Pokémon.
+- Corrección de la presentación visual de las cartas descubiertas.
+- Implementación del modo de pantalla completa.
+- Incorporación de navegación entre el tablero y el menú principal.
+- Adaptación del contador de parejas al nivel seleccionado.
+- Conservación de las reglas originales del juego.
 
-- Incorporación de sprites pixel art de Gardevoir, Gengar, Pikachu y Lucario.
-- Implementación de un fondo inspirado en los escenarios clásicos de Pokémon.
-- Rediseño de las cartas utilizando una Poké Ball como imagen posterior.
-- Incorporación de nuevos colores, bordes y elementos visuales.
-- Modificación de los títulos y botones para mantener una estética uniforme.
-- Conservación del contador de pares encontrados.
-- Implementación de un panel de victoria acorde con el nuevo diseño.
+La cantidad de cartas depende del nivel seleccionado:
 
-El juego continúa utilizando ocho cartas distribuidas en dos filas y cuatro columnas.
+| Dificultad | Parejas | Cartas |
+|------------|---------|--------|
+| Fácil      |    4    |    8   |
+| Medio      |    8    |   16   |
+| Difícil    |   16    |   32   |
 
-Cuando el jugador encuentra un par, las cartas desaparecen después de 250 milisegundos. Cuando las cartas no coinciden, vuelven a ocultarse después de 1000 milisegundos.
+Esta versión representa una mejora funcional importante, ya que el juego deja de utilizar un tablero fijo y permite seleccionar diferentes niveles de dificultad.
 
-Los recursos gráficos se almacenan localmente en la carpeta `assets`, por lo que el juego no necesita conexión a Internet durante su ejecución.
+### Evidencia de la tercera versión
 
-### Evidencia de la segunda versión
+![Menú principal del juego](evidencias/version_3_menu.png)
 
-![Interfaz del juego de memoria Pokémon](evidencias/version_2.png)
+**Figura 3.** Menú principal con selección de dificultad.
 
-**Figura 2.** Interfaz principal del juego de memoria después de incorporar la temática Pokémon.
+![Tablero de la tercera versión](evidencias/version_3_tablero.png)
 
-**Figura 2.** Visualización de los sprites de Pokémon al seleccionar las cartas.
+**Figura 4.** Tablero de juego con sprites pixel art y nueva distribución de cartas.
 
-## Limitación identificada
+![Pantalla de victoria de la tercera versión](evidencias/version_3_victoria.png)
 
-Durante la revisión visual de la segunda versión se identificó un detalle en la presentación de las cartas descubiertas.
+**Figura 5.** Mensaje de victoria al completar las parejas correspondientes al nivel seleccionado.
 
-Aunque los sprites generados presentan una apariencia adecuada, el fondo azul grisáceo utilizado detrás de los personajes no combina completamente con la estética general de la interfaz.
+### 5.5. Validación y pruebas realizadas
 
-Por esta razón, se decidió conservar esta versión como evidencia del segundo proceso de desarrollo y realizar la corrección en una iteración posterior.
+Durante la revisión de la versión 3.0 se comprobó visualmente la presentación del juego y se realizó una partida en dificultad Fácil hasta encontrar las cuatro parejas.
 
-Esta decisión permitirá documentar cómo la identificación de una limitación durante la revisión del resultado genera nuevas instrucciones para la IA.
+Al completar la partida, el juego mostró correctamente un mensaje de victoria con la cantidad de parejas encontradas y las opciones para iniciar una nueva partida o regresar al menú.
+
+También se identificó que el mensaje de victoria se presenta en una ventana independiente de la interfaz principal.
+
+Aunque este comportamiento permite informar al jugador que ha ganado, se considera que integrar el mensaje dentro de la ventana principal mejoraría la continuidad visual y la experiencia de usuario.
+
+Las pruebas de los niveles Medio y Difícil, así como la adaptación a distintas resoluciones, deberán registrarse por separado cuando se completen.
