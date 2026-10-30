@@ -1,112 +1,246 @@
-## Tercera iteración - Versión 3.0
+## . Cuarta iteración - Versión 4.0
 
-### Prompt utilizado
+### Primer prompt utilizado - Temporizador y resultados
 
 **Contexto:**
 
-Eres un asistente experto en desarrollo de videojuegos utilizando Python y Tkinter.
+Tenemos la versión 3.0 de Memoria Pokémon desarrollada en Python y Tkinter, ubicada en `C:\Game`, con `main.py` como archivo principal.
 
-Actualmente tenemos desarrollada la versión 2.0 de un juego de memoria con temática Pokémon, ubicado en `C:\Game`, cuyo archivo principal es `main.py`.
+El juego tiene tres dificultades, sprites pixel art, pantalla completa, contador de parejas y menú principal.
 
-El juego cuenta con cuatro pares de cartas, sprites de Pokémon en pixel art, un fondo inspirado en los videojuegos clásicos de Pokémon, un contador de parejas encontradas y un botón para iniciar una nueva partida.
-
-Necesito que desarrolles la versión 3.0, conservando el funcionamiento y la estética actual, corrigiendo algunos detalles visuales y agregando nuevas funcionalidades.
+Quiero comenzar el desarrollo de la versión 4.0 sin alterar las funcionalidades existentes.
 
 **Instrucción:**
 
-Realiza las siguientes mejoras:
+Implementa las siguientes mejoras:
 
-1. Corrige el fondo azul grisáceo de las cartas descubiertas, sustituyéndolo por un color crema uniforme y conservando los bordes dorados.
-2. Implementa tres niveles de dificultad:
-   - Fácil: 4 parejas y 8 cartas.
-   - Medio: 8 parejas y 16 cartas.
-   - Difícil: 16 parejas y 32 cartas.
-3. Incorpora una pantalla inicial que permita seleccionar el nivel de dificultad.
-4. Utiliza sprites pixel art de Pokémon HeartGold & SoulSilver, correspondientes a la cuarta generación, disponibles en el repositorio PokéAPI.
-5. Integra 16 Pokémon diferentes para permitir jugar en todas las dificultades.
-6. Descarga los recursos gráficos necesarios y almacénalos localmente en la carpeta `assets`.
-7. Implementa un botón para activar y desactivar el modo de pantalla completa.
-8. Permite salir del modo de pantalla completa utilizando la tecla ESC.
-9. Ajusta el tamaño y la distribución de las cartas según la dificultad seleccionada y el espacio disponible.
-10. Incorpora un botón para regresar al menú principal.
-11. Conserva el contador de parejas, el reinicio de partida, la distribución aleatoria de cartas y la pantalla de victoria.
-12. Cancela correctamente los eventos pendientes al reiniciar o cambiar de dificultad.
+**1. Temporizador según dificultad**
 
-**Formato de salida:**
+- Principiante: 4 parejas, sin límite de tiempo.
+- Intermedio: 8 parejas, 4 minutos.
+- Avanzado: 16 parejas, 3 minutos.
 
-- Utiliza Python y Tkinter.
-- Modifica el proyecto existente en `C:\Game`.
-- Conserva `main.py` como archivo principal.
-- Almacena los recursos gráficos en `assets`.
-- Mantén la estética pixel art.
-- Conserva los archivos y las evidencias de versiones anteriores.
-- Documenta la procedencia de los recursos gráficos.
+En Principiante muestra "Sin límite de tiempo".
+
+En los demás niveles, muestra una cuenta regresiva en formato MM:SS, que comience al iniciar la partida.
+
+Cuando queden 15 segundos o menos, cambia el color del temporizador.
+
+Al llegar a cero, finaliza la partida y muestra Game Over.
+
+El temporizador debe detenerse al ganar, reiniciarse con Nueva partida y cancelarse al volver al menú. No debe reiniciarse al cambiar a pantalla completa.
+
+**2. Panel de victoria**
+
+Actualmente la victoria aparece en una ventana independiente.
+
+Reemplázala por un panel integrado en la ventana principal que muestre:
+
+- Mensaje "¡HAS GANADO!".
+- Dificultad completada.
+- Parejas encontradas.
+- Tiempo restante, cuando corresponda.
+- Botón Nueva partida.
+- Botón Volver al menú.
+
+**3. Panel de Game Over**
+
+Cuando se agote el tiempo, muestra un panel integrado que incluya:
+
+- Mensaje "GAME OVER".
+- Dificultad seleccionada.
+- Parejas encontradas.
+- Botón Nueva partida.
+- Botón Volver al menú.
+
+El nivel Principiante nunca debe perder por tiempo.
+
+**4. Menú e interfaz**
+
+Actualiza los nombres y la información de los niveles:
+
+- Principiante: 4 parejas, sin límite.
+- Intermedio: 8 parejas, 4 minutos.
+- Avanzado: 16 parejas, 3 minutos.
+
+Mantén los sprites, el fondo, los bordes dorados y la estética pixel art actual.
+
+Organiza el tablero y los controles para que sigan siendo visibles en pantalla completa y en ventanas más pequeñas.
 
 **Restricciones:**
 
-- No desarrolles el juego desde cero.
-- No elimines funcionalidades existentes.
-- No generes nuevos sprites mediante inteligencia artificial.
-- Utiliza sprites de una misma colección para mantener la uniformidad visual.
-- No implementes todavía temporizador ni sistema de ayudas.
-- No modifiques el README ni las evidencias anteriores.
-- No utilices conexión a Internet durante la ejecución del juego.
+- Modifica el proyecto existente; no lo desarrolles desde cero.
+- Conserva todas las reglas y funcionalidades de la V3.0.
+- No implementes todavía las ayudas.
+- No modifiques el README ni las evidencias.
+- No abras ventanas independientes para victoria o derrota.
+- Cancela correctamente los eventos `after()` al reiniciar, ganar, perder o regresar al menú.
+- Evita que una partida anterior afecte a una nueva.
+- No utilices servicios externos durante la ejecución.
 
-### ¿Qué se solicitó a la IA?
+**Validación solicitada:**
 
-Se solicitó a Codex ampliar las funcionalidades de la versión 2.0 mediante la implementación de tres niveles de dificultad y un sistema de navegación entre pantallas.
+Comprueba los tres niveles, la cuenta regresiva, la victoria, el Game Over, el reinicio, el regreso al menú y la pantalla completa.
 
-También se pidió corregir la presentación visual de las cartas descubiertas y reemplazar los sprites generados anteriormente por recursos pixel art existentes, manteniendo un estilo gráfico uniforme.
+Ejecuta las pruebas automatizables e indica cuáles requieren comprobación manual.
 
-Además, se solicitó implementar el modo de pantalla completa y adaptar dinámicamente la distribución del tablero.
+Corrige los errores encontrados antes de finalizar.
 
-### Resultado obtenido
+### ¿Qué se solicitó a la IA en el primer prompt?
 
-Como resultado de la tercera iteración, se obtuvo una versión del juego con nuevas funcionalidades y mejoras en la experiencia del usuario.
+Se solicitó a Codex incorporar un sistema de temporizador adaptado a los niveles de dificultad y modificar la presentación de los resultados del juego.
 
-Entre los cambios realizados se encuentran:
+El objetivo principal fue agregar presión de tiempo a los niveles Intermedio y Avanzado, conservando el nivel Principiante como una modalidad sin límite de tiempo.
 
-- Implementación de una pantalla principal para seleccionar la dificultad.
-- Incorporación de tres niveles con diferentes cantidades de cartas.
-- Integración de sprites pixel art de Pokémon.
-- Corrección de la presentación visual de las cartas descubiertas.
-- Implementación del modo de pantalla completa.
-- Incorporación de navegación entre el tablero y el menú principal.
-- Adaptación del contador de parejas al nivel seleccionado.
-- Conservación de las reglas originales del juego.
+También se solicitó reemplazar las ventanas independientes de victoria por paneles integrados en la interfaz principal e incorporar una pantalla de Game Over cuando se agotara el tiempo.
 
-La cantidad de cartas depende del nivel seleccionado:
+### Resultado obtenido del primer prompt
 
-| Dificultad | Parejas | Cartas |
-|------------|---------|--------|
-| Fácil      |    4    |    8   |
-| Medio      |    8    |   16   |
-| Difícil    |   16    |   32   |
+Como resultado de esta interacción, se incorporaron las siguientes funcionalidades:
 
-Esta versión representa una mejora funcional importante, ya que el juego deja de utilizar un tablero fijo y permite seleccionar diferentes niveles de dificultad.
+- Temporizador de cuatro minutos en Intermedio.
+- Temporizador de tres minutos en Avanzado.
+- Nivel Principiante sin límite de tiempo.
+- Advertencia visual durante los últimos 15 segundos.
+- Panel de victoria integrado en la ventana principal.
+- Panel de Game Over al agotarse el tiempo.
+- Actualización del menú principal con las características de cada dificultad.
+- Reinicio del temporizador al comenzar una nueva partida.
 
-### Evidencia de la tercera versión
+Después de implementar estos cambios, se realizaron pruebas de funcionamiento y se confirmó que las nuevas funcionalidades operaban correctamente antes de continuar con el siguiente prompt.
 
-![Menú principal del juego](evidencias/version_3_menu.png)
+### Segundo prompt utilizado - Sistema de ayudas
 
-**Figura 3.** Menú principal con selección de dificultad.
+**Contexto:**
 
-![Tablero de la tercera versión](evidencias/version_3_tablero.png)
+Continuamos desarrollando la versión 4.0 de Memoria Pokémon en `C:\Game`, utilizando Python y Tkinter.
 
-**Figura 4.** Tablero de juego con sprites pixel art y nueva distribución de cartas.
+El juego ya dispone de niveles de dificultad, temporizador, Game Over y panel de victoria integrado.
 
-![Pantalla de victoria de la tercera versión](evidencias/version_3_victoria.png)
+Necesito agregar un sistema de ayudas inspirado en la función Sneak Peek del juego Purble Pairs.
 
-**Figura 5.** Mensaje de victoria al completar las parejas correspondientes al nivel seleccionado.
+**Instrucción:**
 
-### 5.5. Validación y pruebas realizadas
+**1. Botón de ayuda**
 
-Durante la revisión de la versión 3.0 se comprobó visualmente la presentación del juego y se realizó una partida en dificultad Fácil hasta encontrar las cuatro parejas.
+Agrega un botón denominado "Vistazo rápido", acompañado de un icono de ojo.
 
-Al completar la partida, el juego mostró correctamente un mensaje de victoria con la cantidad de parejas encontradas y las opciones para iniciar una nueva partida o regresar al menú.
+Al presionarlo:
 
-También se identificó que el mensaje de victoria se presenta en una ventana independiente de la interfaz principal.
+1. Revela simultáneamente todas las cartas que todavía no hayan sido emparejadas.
+2. Manténlas visibles durante 2 segundos.
+3. Vuelve a ocultarlas automáticamente.
+4. Bloquea la selección de cartas mientras la ayuda está activa.
+5. Conserva las parejas encontradas.
+6. Consume una ayuda disponible.
 
-Aunque este comportamiento permite informar al jugador que ha ganado, se considera que integrar el mensaje dentro de la ventana principal mejoraría la continuidad visual y la experiencia de usuario.
+**2. Ayudas por dificultad**
 
-Las pruebas de los niveles Medio y Difícil, así como la adaptación a distintas resoluciones, deberán registrarse por separado cuando se completen.
+- Principiante: 3 ayudas.
+- Intermedio: 2 ayudas.
+- Avanzado: 1 ayuda.
+
+Muestra las ayudas restantes junto al botón.
+
+Cuando se agoten, desactiva el botón.
+
+**3. Integración con el temporizador**
+
+- El tiempo debe continuar avanzando mientras se utiliza una ayuda.
+- Si el tiempo llega a cero durante una ayuda, debe aparecer Game Over inmediatamente.
+- No permitas activar ayudas después de ganar o perder.
+- No permitas activar dos ayudas simultáneamente.
+- Si existen cartas descubiertas o una animación pendiente, desactiva temporalmente la ayuda hasta que termine esa acción.
+
+**4. Reinicio y navegación**
+
+Al seleccionar Nueva partida, restablece la cantidad de ayudas según la dificultad.
+
+Al regresar al menú, cancela cualquier ayuda pendiente.
+
+Evita que eventos anteriores afecten partidas nuevas.
+
+**Restricciones:**
+
+- Conserva todas las funcionalidades implementadas.
+- No modifiques el diseño general, los sprites ni el fondo.
+- No agregues penalizaciones de tiempo por usar ayudas.
+- No implementes sistemas de puntuación adicionales.
+- No modifiques el README ni las evidencias.
+- No utilices servicios externos durante la ejecución.
+
+**Validación solicitada:**
+
+Comprueba que las ayudas funcionen en los tres niveles, se consuman correctamente, revelen las cartas durante 2 segundos y no interfieran con el temporizador.
+
+Verifica el reinicio, el regreso al menú y el agotamiento del tiempo durante una ayuda.
+
+Corrige los errores encontrados y explica cuáles pruebas se realizaron.
+
+### ¿Qué se solicitó a la IA en el segundo prompt?
+
+Se solicitó a Codex incorporar un sistema de ayudas inspirado en la mecánica Sneak Peek de Purble Pairs.
+
+La finalidad fue permitir que el jugador pudiera observar temporalmente las cartas restantes para recordar sus posiciones.
+
+Para mantener el equilibrio entre dificultades, se estableció una cantidad limitada de ayudas según el nivel seleccionado.
+
+También se solicitó integrar esta funcionalidad con el temporizador y evitar conflictos entre los eventos del juego.
+
+### Resultado obtenido del segundo prompt
+
+Como resultado de esta segunda interacción, se implementó el sistema de ayudas denominado "Vistazo rápido".
+
+Entre sus características se encuentran:
+
+- Botón de ayuda identificado mediante un icono de ojo.
+- Revelación temporal de las cartas restantes durante dos segundos.
+- Bloqueo de interacción mientras la ayuda está activa.
+- Cantidad limitada de ayudas según la dificultad.
+- Desactivación del botón al agotar las ayudas.
+- Integración con el temporizador.
+- Restablecimiento de las ayudas al iniciar una nueva partida.
+
+Esta mejora complementó las funcionalidades implementadas anteriormente y permitió finalizar el desarrollo de la versión 4.0.
+
+### Configuración final del juego
+
+| Dificultad | Parejas | Cartas | Tiempo | Ayudas |
+|---|---:|---:|---|---:|
+| Principiante | 4 | 8 | Sin límite | 3 |
+| Intermedio | 8 | 16 | 4 minutos | 2 |
+| Avanzado | 16 | 32 | 3 minutos | 1 |
+
+### Evidencia de la cuarta versión
+
+![Menú principal de la versión final](evidencias/version_4_menu.png)
+
+**Figura 6.** Menú principal con las características de las tres dificultades.
+
+![Temporizador durante una partida](evidencias/version_4_temporizador.png)
+
+**Figura 7.** Tablero con temporizador y contador de parejas.
+
+![Sistema de ayudas](evidencias/version_4_ayuda.png)
+
+**Figura 8.** Función Vistazo rápido mostrando temporalmente las cartas.
+
+![Panel de victoria integrado](evidencias/version_4_victoria.png)
+
+**Figura 9.** Panel de victoria integrado en la ventana principal.
+
+![Pantalla de Game Over](evidencias/version_4_gameover.png)
+
+**Figura 10.** Pantalla de derrota cuando se agota el tiempo disponible.
+
+### Validación y pruebas realizadas
+
+El desarrollo de la versión 4.0 se dividió en dos etapas para facilitar la implementación y validación de las nuevas funcionalidades.
+
+Después del primer prompt se realizaron pruebas del temporizador, los paneles de victoria y derrota y la navegación entre pantallas. Los resultados fueron satisfactorios.
+
+Posteriormente, después del segundo prompt, se realizaron pruebas del sistema de ayudas y se confirmó su funcionamiento correcto.
+
+Las pruebas permitieron comprobar el comportamiento general de las funcionalidades incorporadas y la conservación de las características desarrolladas en las versiones anteriores.
+
+La validación progresiva permitió detectar posibles problemas antes de incorporar nuevas funcionalidades, reduciendo la complejidad del proceso de desarrollo.
