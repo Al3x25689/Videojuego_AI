@@ -1,4 +1,4 @@
-## 5. Tercera iteración - Versión 3.0
+## Tercera iteración - Versión 3.0
 
 ### Prompt utilizado
 
