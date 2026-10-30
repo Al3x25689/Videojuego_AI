@@ -1,69 +1,98 @@
-# Juego de Memoria - Python
+## Segunda iteración - Versión 2.0
 
-## 1. Descripción del proyecto
+### Prompt utilizado
 
-Este proyecto consiste en el desarrollo de un juego de memoria utilizando Python y la biblioteca Tkinter para la creación de la interfaz gráfica.
+**Contexto:**
 
-Para su implementación se utiliza OpenAI Codex, mediante instrucciones estructuradas que permiten generar el código y realizar mejoras progresivas.
+Eres un asistente experto en desarrollo de videojuegos utilizando Python y Tkinter.
 
-## 2. Objetivo del proyecto
+Actualmente tenemos desarrollada la primera versión de un juego de memoria ubicado en `C:\Game`, cuyo archivo principal es `main.py`.
 
-Desarrollar un juego de memoria interactivo en el que el usuario debe encontrar cuatro pares de cartas iguales.
+El juego ya cuenta con un tablero de cuatro pares de cartas, un contador de pares encontrados y un botón para iniciar una nueva partida.
 
-El juego consiste en seleccionar dos cartas por turno para descubrir su contenido. Si ambas coinciden, desaparecen del tablero; de lo contrario, vuelven a ocultarse. El jugador gana cuando encuentra los cuatro pares.
+Necesito que trabajes sobre el código existente, conservando su funcionamiento y mejorando únicamente su presentación visual.
 
-El desarrollo se realizará por etapas, comenzando con una versión básica funcional y posteriormente incorporando mejoras.
+**Instrucción:**
 
-## 3. Primera iteración - Versión 1.0
+Quiero desarrollar la segunda versión del juego de memoria, incorporando una temática inspirada en los videojuegos clásicos de Pokémon, utilizando sprites en pixel art.
 
-### 3.1. Prompt utilizado
+Realiza las siguientes modificaciones:
 
-*# Contexto
-Eres un asistente experto en desarrollo de software utilizando Python. Tu objetivo es desarrollar aplicaciones sencillas, funcionales y fáciles de comprender.
+1. Sustituye los símbolos actuales de las cartas por imágenes de cuatro Pokémon diferentes: Gardevoir, Gengar, Pikachu y Lucario.
+2. Cada Pokémon deberá aparecer dos veces, formando los cuatro pares del juego.
+3. Cuando las cartas estén boca abajo, deberán mostrar un diseño uniforme inspirado en las cartas Pokémon, preferiblemente con una Poké Ball en el centro.
+4. Al seleccionar una carta, deberá mostrarse el sprite del Pokémon correspondiente.
+5. Agrega un fondo visual inspirado en los escenarios clásicos de Pokémon, utilizando una estética pixel art.
+6. Mejora el diseño de los botones, títulos y contador de pares encontrados para que combinen con la temática del juego.
+7. Mantén las cartas organizadas en una cuadrícula de cuatro columnas y dos filas.
+8. Conserva la funcionalidad de reiniciar la partida y distribuir aleatoriamente las cartas.
+9. Cuando el jugador encuentre los cuatro pares, muestra un mensaje de victoria acorde con la temática.
 
-# Instrucción
-Necesito que desarrolles una primera versión de un juego de memoria utilizando Python.
+**Formato de salida:**
 
-El juego debe funcionar de la siguiente manera:
+- Utiliza Python y conserva Tkinter como biblioteca principal.
+- Modifica el archivo existente `C:\Game\main.py`.
+- Crea una carpeta `C:\Game\assets` para almacenar los recursos gráficos.
+- Organiza los sprites y las imágenes del fondo dentro de dicha carpeta.
+- Utiliza imágenes PNG con transparencia cuando corresponda.
+- Mantén el código organizado y fácil de comprender.
 
-1. Al iniciar, se mostrarán 8 cartas distribuidas en una cuadrícula de 4 columnas y 2 filas, formando 4 pares.
-2. Todas las cartas estarán inicialmente boca abajo.
-3. El jugador podrá seleccionar dos cartas por turno para descubrir su contenido.
-4. Si ambas cartas coinciden, desaparecerán del tablero.
-5. Si las cartas no coinciden, permanecerán visibles durante 1 segundo y luego volverán a estar boca abajo.
-6. Las cartas deben distribuirse aleatoriamente cada vez que comience una partida.
-7. Cuando el jugador encuentre los 4 pares, se mostrará un mensaje indicando que ha ganado.
-8. El juego debe incluir un botón para iniciar una nueva partida.
+**Restricciones:**
 
-# Formato de salida
-- Utiliza Python como lenguaje de programación.
-- Desarrolla una interfaz gráfica sencilla utilizando Tkinter.
-- Guarda todos los archivos del proyecto en la carpeta `C:\Game`.
-- El archivo principal debe llamarse `main.py`.
-- Incluye las instrucciones necesarias para ejecutar el juego.
+- No desarrolles el juego desde cero; modifica la versión existente.
+- No elimines las funcionalidades implementadas en la versión 1.0.
+- Mantén los cuatro pares de cartas originales.
+- No modifiques las reglas del juego.
+- No utilices servicios externos durante la ejecución.
+- Las imágenes deben cargarse desde archivos locales.
+- Conserva la apariencia pixel art de los sprites.
+- Utiliza recursos gráficos con permisos de uso adecuados y documenta su procedencia.
+- Asegúrate de que el juego funcione correctamente en Windows.
 
-### 3.2. ¿Qué se solicitó a la IA?
+### ¿Qué se solicitó a la IA?
 
-Se solicitó a Codex desarrollar una primera versión del juego de memoria utilizando Python, estableciendo como funcionalidad principal la identificación de cuatro pares de cartas.
+Se solicitó a Codex realizar una mejora visual sobre la primera versión del juego, incorporando una temática inspirada en los videojuegos clásicos de Pokémon.
 
-La intención de este primer prompt fue obtener una estructura básica del juego sin incorporar imágenes personalizadas ni características adicionales.
+El objetivo principal de esta iteración fue reemplazar los elementos visuales básicos por imágenes personalizadas, manteniendo las funcionalidades previamente desarrolladas.
 
-### 3.3. Resultado obtenido
+Además, se solicitó implementar un fondo pixel art, rediseñar las cartas y mejorar la presentación de los botones, títulos y mensajes del juego.
 
-Como resultado de la primera interacción con Codex, se obtuvo una aplicación con interfaz gráfica desarrollada utilizando Tkinter.
+### Resultado obtenido
 
-La interfaz generada presenta las siguientes características:
+Como resultado de la segunda interacción con Codex, se obtuvo una nueva interfaz gráfica con una estética inspirada en los videojuegos clásicos de Pokémon.
 
-- Un tablero compuesto por ocho cartas distribuidas en dos filas y cuatro columnas.
-- Cartas representadas inicialmente mediante signos de interrogación.
-- Un contador que muestra la cantidad de pares encontrados.
-- Un botón para iniciar una nueva partida.
-- Una estructura visual sencilla que servirá como base para futuras mejoras.
+Para esta versión, Codex utilizó herramientas de generación de imágenes mediante inteligencia artificial, creando recursos gráficos que posteriormente fueron integrados al juego.
 
-### 3.4. Evidencia de la primera versión
+Entre los principales cambios realizados se encuentran:
 
-![Interfaz inicial del juego de memoria](evidencias/version_1.png)
+- Incorporación de sprites pixel art de Gardevoir, Gengar, Pikachu y Lucario.
+- Implementación de un fondo inspirado en los escenarios clásicos de Pokémon.
+- Rediseño de las cartas utilizando una Poké Ball como imagen posterior.
+- Incorporación de nuevos colores, bordes y elementos visuales.
+- Modificación de los títulos y botones para mantener una estética uniforme.
+- Conservación del contador de pares encontrados.
+- Implementación de un panel de victoria acorde con el nuevo diseño.
 
-**Figura 1.** Interfaz inicial del juego de memoria generada mediante Codex.
+El juego continúa utilizando ocho cartas distribuidas en dos filas y cuatro columnas.
 
-Esta primera versión establece la base del proyecto. En las siguientes iteraciones se buscará mejorar su presentación visual y agregar nuevas funcionalidades mediante prompts adicionales.
+Cuando el jugador encuentra un par, las cartas desaparecen después de 250 milisegundos. Cuando las cartas no coinciden, vuelven a ocultarse después de 1000 milisegundos.
+
+Los recursos gráficos se almacenan localmente en la carpeta `assets`, por lo que el juego no necesita conexión a Internet durante su ejecución.
+
+### Evidencia de la segunda versión
+
+![Interfaz del juego de memoria Pokémon](evidencias/version_2.png)
+
+**Figura 2.** Interfaz principal del juego de memoria después de incorporar la temática Pokémon.
+
+**Figura 2.** Visualización de los sprites de Pokémon al seleccionar las cartas.
+
+## Limitación identificada
+
+Durante la revisión visual de la segunda versión se identificó un detalle en la presentación de las cartas descubiertas.
+
+Aunque los sprites generados presentan una apariencia adecuada, el fondo azul grisáceo utilizado detrás de los personajes no combina completamente con la estética general de la interfaz.
+
+Por esta razón, se decidió conservar esta versión como evidencia del segundo proceso de desarrollo y realizar la corrección en una iteración posterior.
+
+Esta decisión permitirá documentar cómo la identificación de una limitación durante la revisión del resultado genera nuevas instrucciones para la IA.
